@@ -4,10 +4,10 @@
 <html>
 
 <head>
-  <link rel="icon" type="image/x-icon" href="images/northcoders_favicon-01.png"/>
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -115,16 +115,19 @@
         <div class="col-md-12 nav" style="margin-bottom:80px;">
           <ul class="nav-ul">
           <li class="nav-tabs"><a href="index.html" class="a-nav-tabs">Home</a></li>
-          <li class="nav-tabs"><a href="gallery.html" class="a-nav-tabs">Solar System</a></li>
+
           <li class="nav-tabs"><a href="index.html" class="a-nav-tabs">ISS Live</a></li>
           <li class="nav-tabs" id="button" style="border-bottom:none"><button type="button" id="planet-info" class="btn btn-primary btn-lg button-nav">Planet Info</button></li>
           <nav aria-label="Zoom">
             <ul class="pager" style="border-radius:5px;background-image:linear-gradient(to bottom,#337ab7 0,#265a88 100%);">
               <li class="zoom1"><button type="button" id="zoom-out" class="btn btn-primary zoom-btn"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></li>
 
-              <li><button type="button" class="btn-active stage-buttons btn btn-outline-primary btn-lg" id='solar-system3'>Solar System</button></li>
-              <li><button class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system2'>Galaxy </button></li>
-                <li><button class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system3'>Outer  Space</button></li>
+              <li><button type="button" class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system3'>Solar System</button></li>
+
+              <li><button type="button" class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system2'>Galaxy </button></li>
+
+              <li><button type="button" class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system1'>Outer  Space</button></li>
+
               <li class="zoom2 float-right"><button type="button" id="zoom-in" class="btn btn-primary zoom-btn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></li>
             </ul>
           </nav>
