@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="images/northcoders_favicon-01.png"/>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+
+
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+
+
+<link rel="stylesheet" href="css/style.css">
+<title>NorthCoders Project</title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="container-fluid">
+    <div class="col-md-3">
+      <div class="planet-wiki" id="wiki-nav-click1">
+      <div class="row">
+        <div class="col-md-12 planet-tabs">
+          <p style="text-align: center">
+            <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+              <img src="images/mercure.jpg" width="70%" height="70%" style="margin-top:20px">
+            </div>
+            <div class="col-md-6" style="margin-top:60px">
+              <h1 style="color:#ffffff;margin-top:60px; display: inline;">1. Mercury </h1> ><br><br>
+                <button type="button" id='btn-mercury-enable' style="display:inline; width:49%" class="highlight btn btn-primary btn-lg">Highlight</button>
+                <button type="button" data-toggle="modal" data-target="#myModal" style="display:inline; width:49%" class="btn btn-secondary btn-lg">Read More</button>
+            </div>
+
+          </p>
+
+        </div>
+     </div>
+     <div class="row">
+       <div class="col-md-12 planet-tabs">
+         <p style="text-align: center">
+           <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+           <img src="images/venus2.png" width="70%" height="70%" style="margin-top: 20px">
+           </div>
+           <div class="col-md-6" style="margin-top:60px">
+             <h1 style="color:#ffffff;margin-top:60px; display: inline;">2. Venus </h1><br><br>
+             <button type="button" id='btn-venus-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+             <button type="button" data-toggle="modal" data-target="#myModal2" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Remove</button>
+           </div>
+         </p>
+       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 planet-tabs">
+        <p style="text-align: center">
+
+          <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+          <img src="images/earth2.png" width="70%" height="70%" style="margin-top:20px">
+          </div>
+          <div class="col-md-6" style="margin-top:60px">
+            <h1 style="color:#ffffff;margin-top:60px; display: inline;">3. Earth </h1><br><br>
+            <button type="button" id='btn-earth-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+            <button type="button" data-toggle="modal" data-target="#myModal3" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Read More</button>
+          </div>
+
+        </p>
+
+      </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12 planet-tabs">
+       <p style="text-align: center">
+
+         <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+         <img src="images/mars2.png" width="70%" height="70%" style="margin-top:20px">
+         </div>
+         <div class="col-md-6" style="margin-top:60px">
+           <h1 style="color:#ffffff;margin-top:60px; display: inline;">4. Mars </h1><br><br>
+           <button type="button" id='btn-mars-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+           <button type="button" data-toggle="modal" data-target="#myModal4" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Read More</button>
+         </div>
+
+       </p>
+
+     </div>
+  </div>
+  </div>
+  </div>
+
+<div class="col-md-6 push-down" >
+  <div class="col-md-12">
+    <!-- ASTROID BELT -->
+    <div class="container-fluid" style="position:relative; z-index:500">
+      <div class="row">
+        <div class="col-md-12 nav" style="margin-bottom:80px;">
+          <ul class="nav-ul">
+          <li class="nav-tabs"><a href="index.html" class="a-nav-tabs">Home</a></li>
+          <li class="nav-tabs"><a href="gallery.html" class="a-nav-tabs">Solar System</a></li>
+          <li class="nav-tabs"><a href="index.html" class="a-nav-tabs">ISS Live</a></li>
+          <li class="nav-tabs" id="button" style="border-bottom:none"><button type="button" id="planet-info" class="btn btn-primary btn-lg button-nav">Planet Info</button></li>
+          <nav aria-label="Zoom">
+            <ul class="pager" style="border-radius:5px;background-image:linear-gradient(to bottom,#337ab7 0,#265a88 100%);">
+              <li class="zoom1"><button type="button" id="zoom-out" class="btn btn-primary zoom-btn"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button></li>
+
+              <li><button type="button" class="btn-active stage-buttons btn btn-outline-primary btn-lg" id='solar-system3'>Solar System</button></li>
+              <li><button class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system2'>Galaxy </button></li>
+                <li><button class="stage-buttons btn btn-outline-primary btn-lg" id='solar-system3'>Outer  Space</button></li>
+              <li class="zoom2 float-right"><button type="button" id="zoom-in" class="btn btn-primary zoom-btn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></li>
+            </ul>
+          </nav>
+        </ul>
+        </div>
+     </div>
+  </div>
+<div class="container-fluid" style="width:100%; height:1000px; position:absolute; z-index:1">
+  <p style="text-align: center">
+      <img src="images/galaxy-5.png" id="outer-spacee" class="outer-space align-center" width="300px"/>
+
+      <!-- <img src="images/galaxy-3.png" id="outer-space2" class="outer-space align-center" width="200px"/>
+        <br>
+      <img src="images/galaxy-1.png" id="outer-space3" class="outer-space align-center" width="290px"/>
+        <br>
+      <img src="images/galaxy-4.gif" id="outer-space4" class="outer-space align-center" width="220px"/>
+
+      <img src="images/galaxy-6.png" id="outer-space5" class="outer-space align-center" width="250px"/>
+
+      <img src="images/galaxy-7.png" id="outer-space6" class="outer-space align-center" width="200px"/>
+
+      <img src="images/galaxy-8.png" id="outer-space7" class="outer-space align-center" width="400px"/> -->
+  </p>
+</div>
+
+    <p style="text-align: center">
+      <img src="images/galaxy-1.png" width="100%" id='galaxy' class="galaxy">
+    </p>
+
+    <div class="col-md-12 astroid-div-main" id="astroid">
+      <!--layer3-->
+
+        <p style="text-align: center; margin-top: 165px">
+
+        <!-- NEPTUNE -->
+            <p style="text-align: center">
+              <img src="images/neptune.png" width="50px" height="50px" id='neptune' class="planet" style="position: relative">
+            </p>
+        <!-- URANUS -->
+            <p style="text-align: center">
+              <img src="images/uranus.png" width="50px" height="50px" id='uranus' class="planet" style="position: relative">
+            </p>
+        <!-- SATURN -->
+            <p style="text-align: center">
+              <img src="images/saturn.png" width="80px" height="50px" id='saturn' class="planet" style="position: relative">
+            </p>
+        <!-- JUPITER -->
+            <p style="text-align: center">
+              <img src="images/jupiter.png" width="80px" height="80px" id='jupiter' class="planet" style="position: relative">
+            </p>
+       <!-- MARS -->
+            <p style="text-align: center">
+              <img src="images/mars.png" width="30px" height="30px" id='mars' class="planet" style="position: relative">
+            </p>
+        <!-- EARTH -->
+            <p style="text-align: center">
+              <img src="images/earth.png" width="35px" height="35px" id='earth' class="planet" style="position: relative">
+            </p>
+        <!-- VENUS -->
+           <p style="text-align: center">
+              <img src="images/venus.png" width="25px" id='venus' class="planet" style="position: relative;">
+            </p>
+        <!-- MERCURY -->
+            <p style="text-align: center">
+              <img src="images/mercury.png" id='mercury' class="planet" style="position: relative;" >
+            </p>
+        <!-- SUN -->
+            <p style="text-align: center">
+              <img src="images/sun.png" id='sun' class="planet" style="position: relative">
+            </p>
+        </p>
+    </div>
+
+  </div>
+</div>
+
+  <div class="col-md-3" id="wiki-nav">
+    <div class="planet-wiki" id="wiki-nav-click2">
+      <div class="row">
+          <div class="col-md-12 planet-tabs-right">
+            <p style="text-align: center">
+              <div class="col-md-6" style="margin-top:60px">
+                <h1 style="color:#ffffff;margin-top:60px; display: inline;">5. Jupiter </h1><br><br>
+                <button type="button" id='btn-jupiter-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+                <button type="button"  data-toggle="modal" data-target="#myModal5" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Remove</button>
+              </div>
+              <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+              <img src="images/jupiter2.png" width="70%" height="70%" style="margin-top:20px">
+              </div>
+            </p>
+          </div>
+       </div>
+       <div class="row">
+           <div class="col-md-12 planet-tabs-right">
+             <p style="text-align: center">
+               <div class="col-md-6" style="margin-top:60px">
+                 <h1 style="color:#ffffff;margin-top:60px; display: inline;">6. Saturn </h1><br><br>
+                 <button type="button" id='btn-saturn-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+                 <button type="button" data-toggle="modal" data-target="#myModal6" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Remove</button>
+               </div>
+               <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+               <img src="images/saturn2.png" width="80%" height="70%" style="margin-top:20px">
+               </div>
+             </p>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 planet-tabs-right">
+              <p style="text-align: center">
+                <div class="col-md-6" style="margin-top:60px">
+                  <h1 style="color:#ffffff;margin-top:60px; display: inline;">7. Uranus </h1><br><br>
+                  <button type="button" id='btn-uranus-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+                  <button type="button" data-toggle="modal" data-target="#myModal7" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Remove</button>
+                </div>
+                <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+                <img src="images/uranus2.png" width="70%" height="70%" style="margin-top:20px">
+                </div>
+              </p>
+            </div>
+         </div>
+         <div class="row">
+             <div class="col-md-12 planet-tabs-right">
+               <p style="text-align: center">
+                 <div class="col-md-6" style="margin-top:60px">
+                   <h1 style="color:#ffffff;margin-top:60px; display: inline;">8. Neptune </h1><br><br>
+                   <button type="button" id='btn-neptune-enable' style="display:inline; width:45%" class="highlight btn btn-primary btn-lg">Highlight</button>
+                   <button type="button" data-toggle="modal" data-target="#myModal8" style="display:inline; width:45%" class="btn btn-secondary btn-lg">Remove</button>
+                 </div>
+                 <div class="col-md-6" style="padding:0px; margin: 0px; height: 100%">
+                 <img src="images/neptune2.txt" width="70%" height="70%" style="margin-top:20px">
+                 </div>
+               </p>
+             </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid modal-index">
+  <!-- Modal - mercury-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Mercury</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - venus-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal2" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Venue</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - earth-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal3" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Earth</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - mars-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal4" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Mars</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - jupiter-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal5" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Jupiter</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - saturn-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal6" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Saturn</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - uranus-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal7" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Uranus</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal - neptune-->
+  <div style="zoom:2; margin-top:100px;" class="modal fade" id="myModal8" tabindex="100" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="text-align:center;"id="exampleModalLabel">Neptune</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed varius lacus, ac rutrum urna. Fusce condimentum arcu at nulla mattis dapibus. Integer massa lorem, dapibus non viverra at, feugiat in urna. Cras neque nunc, efficitur vitae dapibus in, convallis id dolor. Sed sollicitudin convallis sapien vitae bibendum. In vitae urna quis justo congue eleifend. Mauris at felis ut mi convallis vestibulum ut et augue. Mauris pulvinar tincidunt tincidunt. Aliquam vestibulum dui nisl. Vivamus id neque vitae purus iaculis scelerisque. Mauris eleifend elit vel metus ultricies, et maximus massa tincidunt. Fusce interdum ut tellus non mattis. Aenean in rhoncus augue, et elementum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent finibus arcu ligula, et dapibus nisl finibus in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

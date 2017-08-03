@@ -1,0 +1,217 @@
+body {
+  height: 100%;
+  width: 100%;
+  zoom: 0.5;
+  background-image: url('../images/background.jpg');
+  background-clip: border-box;
+  background-repeat: no-repeat;
+
+}
+a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: Arial;
+}
+a:hover{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: Arial;
+}
+
+img {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+.nav {
+  width: 100%;
+  height: 110px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+.nav-ul {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.nav-tabs {
+  display: inline;
+  font-size: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: none;
+}
+
+.a-nav-tabs{
+  width: 100px;
+  height: 100%;
+  padding: 50px;
+
+}
+
+.a-nav-tabs:hover{
+  width: 100%;
+  height: 100%;
+  color: #999999;
+  border-bottom: 2px solid #ffffff
+}
+
+.button-nav {
+  width: 200px;
+  /*padding: 35px;*/
+  border-bottom:none;
+  font-size:25px;
+  display: static;
+}
+
+.button-up{
+  display: inline-block;
+
+}
+.button-down {
+  display :inline-block;
+
+}
+
+.zoom1 {
+  padding: 10px;
+
+  float: left;
+}
+.zoom2 {
+  padding: 10px;
+
+  float:right;
+}
+
+.zoom-btn {
+  padding: 15px;
+  text-align:center;
+  width:100px;
+}
+.planet-wiki{
+  height: 100%;
+  margin-top: 100px;
+  display: none;
+  position: relative;
+  z-index: 400;
+}
+
+.push-down {
+  margin-bottom: 20px;
+}
+
+.planet-tabs {
+  width:100%;
+  height: 250px;
+  border-right: 40px solid #ffffff;
+  border-left: 40px solid #000000;
+  margin-bottom: 30px;
+  background-color: #000000;
+  position: relative;
+  z-index: 400;
+}
+.planet-tabs-right {
+  width:100%;
+  height: 250px;
+  border-right: 40px solid #000000;
+  background-color: #000000;
+  border-left: 40px solid #ffffff;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 400;
+}
+
+.planet-wiki-title {
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #fffffff;
+}
+
+.astroid-div-main{
+  zoom: 0.8;
+  height:1400px;
+  width:100%;
+  background-image: url('../images/astroidbelt.png');
+  background-size:contain;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-position:center;"
+  position: absolute;
+  z-index: 10000;
+}
+
+.planet{
+  z-index: 100;
+  transform:scale(1);
+  transition:transform 0.4s ease;
+}
+.planet.active {
+  border: solid 0.01px #ffffff;
+  transform:scale(8);
+  border-radius: 100%;
+}
+.zoom-out{
+
+  transform:scale(-0.00001);
+  transition:transform 4s ease-in-out;
+}
+
+.zoom-in{
+  transform:scale(1);
+  transition:transform 6s ease;
+}
+
+.galaxy {
+  transform:scale(0.8);
+  z-index: 90;
+  opacity: 0;
+  transition: all 6s ease;
+}
+
+.galaxy.active{
+  opacity: 1;
+  transform: scale(1.2)
+}
+
+.modal-open {
+  position: relative;
+  z-index: 1600;
+}
+.btn-outline-primary {
+   border: solid #337ab7 2px;
+   color: #ffffff;
+   padding:20px;
+   width: 300px;
+   margin-top: 5px;
+ }
+ .btn-active {
+    border: solid #337ab7 2px;
+    font-family: Arial;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #245580;
+    padding:20px;
+    width: 300px;
+    margin-top: 5px;
+  }
+.outer-space{
+  position: relative;
+  z-index: 1;
+  transform:scale(0.8);
+  transition: all 6s ease;
+  margin:0px;
+  opacity: 0;
+}
+.outer-space.active{
+  opacity: 1;
+  transform: scale(1.3)
+}
