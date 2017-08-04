@@ -36,19 +36,33 @@ setupPlanet('mars', 260, 0.00802 );
 setupPlanet('earth', 230, 0.01 );
 setupPlanet('venus', 190, 0.01174 );
 setupPlanet('mercury', 160, 0.01607 );
-setupPlanet('outer-space12', 300, 0.01607 );
 
 
 $(document).ready(function(){
 
+  $('#zoom-out').mouseenter(function(){
+    $('.shuttle-animation-div').fadeTo(500, 1)
+  })
+  $('#zoom-out').mouseleave(function(){
+    $('.shuttle-animation-div').fadeTo(500, 0)
+  })
+  $('#zoom-out').on('click', function(){
+    $("#shuttle").animate({
+            bottom: "+=3000px",
+          },5000 );
+    $("#tower").animate({
+            bottom: "-=1000px",
+          },4000 );
+  })
   //ZOOM STATE COUNTER 1/2/3
   var counter = 0;
 
   // NAVIGATION BAR - BUTTON ACTIVE FOR SOLAR SYSTEM ENGAGED AT COUNTER 0
-  $('#solar-system3').addClass('btn-active');
-  $('#astroid').addClass('active');
+
   counterTest = function (){
+
     if(counter === 0){
+
       $('#astroid').addClass('active');
       $('#planetInfo').fadeIn(0.1, function(){
         $('#planetInfo').css({'display' : 'relative'});
@@ -64,7 +78,6 @@ $(document).ready(function(){
 
 
     }else if (counter === 1){
-
       //planet info button fades out due to none relevance - too relevant button
       $('#galaxyInfo').fadeIn(0.1, function(){
         $('#galaxyInfo').css({'display' : 'relative'});
