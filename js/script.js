@@ -46,7 +46,7 @@ $(document).ready(function(){
 
   // NAVIGATION BAR - BUTTON ACTIVE FOR SOLAR SYSTEM ENGAGED AT COUNTER 0
   $('#solar-system3').addClass('btn-active');
-
+  $('#astroid').addClass('active');
   counterTest = function (){
     if(counter === 0){
       $('#astroid').addClass('active');
