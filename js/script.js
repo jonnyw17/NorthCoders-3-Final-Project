@@ -36,7 +36,7 @@ setupPlanet('mars', 260, 0.00802 );
 setupPlanet('earth', 230, 0.01 );
 setupPlanet('venus', 190, 0.01174 );
 setupPlanet('mercury', 160, 0.01607 );
-setupPlanet('outer-spacee', 300, 0.01607 );
+setupPlanet('outer-space12', 300, 0.01607 );
 
 
 $(document).ready(function(){
@@ -44,81 +44,99 @@ $(document).ready(function(){
   //ZOOM STATE COUNTER 1/2/3
   var counter = 0;
 
-
-
-  // BUTTON BAR ACTIVE CLASS ENGAGED AT COUNTER 0
-  if(counter === 0){
-    $('#solar-system3').addClass('btn-active');
-    // $('.galaxy').addClass('active');
-  }
+  // NAVIGATION BAR - BUTTON ACTIVE FOR SOLAR SYSTEM ENGAGED AT COUNTER 0
+  $('#solar-system3').addClass('btn-active');
 
   counterTest = function (){
-   if (counter === 1){
-     //navbar button state changed if condition is met
-    $('#solar-system3').removeClass('btn-active');
-    $('#solar-system2').addClass('btn-active');
-    //if zoom-out condition is met solar system 'zooms-out'
-    $('#astroid').addClass('zoom-out');
-    $('.galaxy').addClass('active');
-    //planet info button fades out due to none relevance
-    $('#planet-info').fadeOut(1000, function(){
-    $('#planet-info').css({'display' : 'none'})
-    });
+    if(counter === 0){
+      $('#astroid').addClass('active');
+      $('#planetInfo').fadeIn(0.1, function(){
+        $('#planetInfo').css({'display' : 'relative'});
+        $('#galaxyInfo').css({'display' : 'none'});
+        $('#outerSpaceInfo').css({'display' : 'none'});
+      });
+
+      $('#solar-system2').removeClass('btn-active');
+      $('#solar-system1').removeClass('btn-active');
+      $('#solar-system3').addClass('btn-active');
+      $('.galaxy').removeClass('active');
+      $('.outer-space').removeClass('active');
 
 
+    }else if (counter === 1){
 
-    //if zoom-in is triggered solar system reappears/galaxy fade out setting back to state 1(solar system)
-    // $('#zoom-in').on('click', function(){
-    //   $('#astroid').addClass('zoom-in');
-    //   $('.galaxy').removeClass('active')
-    //   $('#solar-system3').removeClass('btn-active');
-    //   $('#solar-system2').addClass('btn-active');
-    // });
+      //planet info button fades out due to none relevance - too relevant button
+      $('#galaxyInfo').fadeIn(0.1, function(){
+        $('#galaxyInfo').css({'display' : 'relative'});
+        $('#planetInfo').css({'display' : 'none'});
+        $('#outerSpaceInfo').css({'display' : 'none'});
+      });
+
+      $('#astroid').removeClass('active');
+       //navbar button state changed if condition is met to galaxy
+      $('#solar-system3, #solar-system1').removeClass('btn-active');;
+      $('#solar-system2').addClass('btn-active');
+      //if zoom-out condition (counter 1) is met solar system 'zooms-out' galaxy 'zooms-in'
+      $('#astroid').addClass('zoom-out');
+      $('.galaxy').addClass('active');
 
   }else if(counter === 2){
-    //navbar button state changed if condition is met (galaxy - outerspace)
+
+      //planet info button fades out due to none relevance - too relevant button
+      $('#outerSpaceInfo').fadeIn(0.1, function(){
+        $('#outerSpaceInfo').css({'display' : 'relative'});
+        $('#galaxyInfo').css({'display' : 'none'});
+        $('#planetInfo').css({'display' : 'none'});
+      });
+
+      //navbar button state changed if condition is met (galaxy - outerspace)
       $('#solar-system2').removeClass('btn-active');
       $('#solar-system1').addClass('btn-active');
+
       //galaxy 'zooms out' outerspace galaxies appear
       $('.galaxy').removeClass('active');
       $('.outer-space').addClass('active');
       $('#zoom-in').on('click', function(){
         $('.galaxy').addClass('zoom-in');
         $('.outer-space').removeClass('active')
-        $('#solar-system3').removeClass('btn-active');
-        $('#solar-system2').addClass('btn-active');
       });
-
-  // }else if(counter === 3){
-  //     //galaxy 'zooms out' outerspace galaxies appear
-  //     // $('.galaxy').removeClass('active');
-  //     // $('.outer-space').addClass('active');
-  //
    }
 }
 
   // PLANET INFO TABS FADE IN TOGGLE SET FOR COUNTER 0
-  $('#planet-info').click(function(){
+  $('#planetInfo').click(function(){
+    $('#wiki-nav-click1, #wiki-nav-click2').fadeToggle(500)
+  });
+  // PLANET INFO TABS FADE IN TOGGLE SET FOR COUNTER 1
+  $('#galaxyInfo').click(function(){
+    $('#wiki-nav-click1, #wiki-nav-click2').fadeToggle(500)
+  });
+  // PLANET INFO TABS FADE IN TOGGLE SET FOR COUNTER 2
+  $('#outerSpaceInfo').click(function(){
     $('#wiki-nav-click1, #wiki-nav-click2').fadeToggle(500)
   });
 
-  // SET ZOOM STATES (COUNTER 0 = SOLAR SYSTEM, COUNTER 1 = GALAXY, COUNTER 3 = OUTERSPACE)
+  // SET ZOOM STATES (COUNTER 0 = SOLAR SYSTEM, COUNTER 1 = GALAXY, COUNTER 2 = OUTERSPACE)
   $('#zoom-out').on('click', function() {
-
-
     if (counter >= 2) {
-
-      return
+      return;
     };
-
     counter+=1;
     counterTest();
-
+    console.log(counter)
   });
 
   $('#zoom-in').on('click', function(){
+    if (counter <= 0) {
+      return;
+    };
     counter-=1;
     counterTest();
-
+    console.log(counter)
   });
+});
+
+$('#galaxyInfo').on('click', function(){
+  $('wiki-nav-click1, wiki-nav-click2').css({'display' : 'none'});
+  $('galaxy-info-tab1, galaxy-info-tab2').fadeTo(500);
 });
